@@ -1,0 +1,19 @@
+{
+  "name": "arsh-satsangi-portfolio",
+  "version": "1.0.0",
+  "description": "Electrical & Embedded Systems Engineering Portfolio for Arsh Satsangi",
+  "scripts": {
+    "start": "npx serve . -l 3000",
+    "dev": "python3 -m http.server 3000"
+  },
+  "keywords": [
+    "portfolio",
+    "electrical-engineering",
+    "vlsi",
+    "verilog",
+    "cordic",
+    "embedded-systems"
+  ],
+  "author": "Arsh Satsangi",
+  "license": "MIT"
+}

@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="stone">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arsh Satsangi — Hardware, VLSI & Embedded Systems Engineer</title>
+  <meta name="description" content="Portfolio of Arsh Satsangi, Electrical Engineering undergraduate specializing in VLSI, embedded systems, FPGA pipelined architecture, and analog circuit design.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23ffffff'/><text x='50%' y='62%' font-family='monospace' font-weight='bold' font-size='48' fill='%230066cc' text-anchor='middle'>AS</text></svg>">
+</head>
+<body>
+  <!-- Interactive Cursor Follower -->
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Interactive Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Fixed Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-brand">
+        <span class="nav-logo-badge">AS // 01</span>
+        <span class="nav-name">Arsh Satsangi</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#laboratory">Lab</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#honors">Honors</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Multi-Theme Palette Selector -->
+        <div class="theme-selector-group" role="group" aria-label="Theme selector">
+          <button class="theme-pill-btn" data-theme-val="white" title="Pure Crisp White">
+            <span class="theme-dot dot-white"></span>White
+          </button>
+          <button class="theme-pill-btn" data-theme-val="beige" title="Warm Luxury Beige">
+            <span class="theme-dot dot-beige"></span>Beige
+          </button>
+          <button class="theme-pill-btn active" data-theme-val="stone" title="Soft Alabaster Stone">
+            <span class="theme-dot dot-stone"></span>Stone
+          </button>
+          <button class="theme-pill-btn" data-theme-val="dark" title="Obsidian Dark">
+            <span class="theme-dot dot-dark"></span>Dark
+          </button>
+        </div>
+
+        <!-- Resume Download -->
+        <a href="Arsh_Satsangi_Resume.pdf" download="Arsh_Satsangi_Resume.pdf" class="btn-resume">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Resume
+        </a>
+
+        <button id="mobile-toggle" class="mobile-menu-btn" aria-label="Toggle navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION (Recruiter Scannable, High-Impact) -->
+    <section id="home" class="hero-section">
+      <div class="container hero-box">
+        <!-- Profile Picture with Rotating Conic Halo & Orbital Radar -->
+        <div class="hero-avatar-wrap">
+          <div class="avatar-halo"></div>
+          <div class="avatar-orbit-ring"></div>
+          <img src="assets/profile.jpg" alt="Arsh Satsangi - Hardware Engineer" class="hero-avatar-img">
+        </div>
+
+        <!-- Availability Status Badge -->
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          AVAILABLE FOR HARDWARE, VLSI &amp; EMBEDDED INTERNSHIPS
+        </div>
+
+        <!-- Name & Dynamic Roles -->
+        <h1 class="hero-title">Arsh Satsangi</h1>
+        <div class="hero-role-wrapper">
+          <span id="typing-text"></span><span class="typing-cursor"></span>
+        </div>
+
+        <!-- Short 2-Line Recruiter Summary -->
+        <p class="hero-bio">
+          Electrical Engineering undergraduate focused on VLSI, embedded systems, and analog circuit design. I build hardware systems from RTL to working prototypes, including a 32-bit CORDIC processor and smart power-line fault detection systems.
+        </p>
+
+        <!-- Primary Action CTAs -->
+        <div class="hero-ctas">
+          <a href="#projects" class="btn-primary">
+            View Top Projects
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+          <a href="Arsh_Satsangi_Resume.pdf" download="Arsh_Satsangi_Resume.pdf" class="btn-secondary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Download Resume
+          </a>
+          <button class="btn-secondary copy-email-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Copy Email
+          </button>
+        </div>
+
+        <!-- Professional Meta Badges -->
+        <div class="hero-meta-row">
+          <span class="meta-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Agra, Uttar Pradesh, India
+          </span>
+          <span class="meta-pill" id="live-time-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span id="live-time-text">--:-- IST</span>
+          </span>
+          <span class="meta-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Dayalbagh Educational Institute (7.07 CGPA)
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION (Clean, Focused, Professional) -->
+    <section id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p class="section-intro-desc">
+          Engineering practical hardware solutions from bit-level RTL synthesis to physical analog circuitry.
+        </p>
+
+        <div class="about-grid">
+          <!-- Left Column: Professional Narrative & Quantified Impact -->
+          <div class="about-main-card spotlight-card">
+            <div class="about-tagline">
+              Bridging digital logic architectures, analog resilience, and industrial power engineering.
+            </div>
+            <div class="about-paragraphs">
+              <p>
+                I am a 3rd-year Electrical Engineering student at <strong>Dayalbagh Educational Institute (DEI), Agra</strong>, specializing in Electronics. My work centers on building mathematically verified, hardware-efficient systems — spanning multiplier-less digital arithmetic in Verilog to resonant carrier fault localization across AC distribution grids.
+              </p>
+              <p>
+                My background combines academic circuit theory with industrial exposure: from synthesizing placed-and-routed CORDIC silicon layouts in Xilinx Vivado to testing high-voltage power transformers under IS/IEC standards during my internship at <strong>MEI Power Private Limited (MARSONS Group)</strong>.
+              </p>
+            </div>
+
+            <!-- Quantified Proof-of-Impact Stats Grid -->
+            <div class="stats-counter-grid">
+              <div class="stat-item">
+                <div class="stat-num" data-target="11">Top 11</div>
+                <div class="stat-label">Among 250+ Global Teams (HackSecure X)</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num" data-target="6">6+</div>
+                <div class="stat-label">Silicon, Analog &amp; Embedded Projects Built</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num" data-target="1">1st Prize</div>
+                <div class="stat-label">IEEE DEI Cybersecurity Quiz (100+ Participants)</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num" data-target="1">North Zone</div>
+                <div class="stat-label">Anveshan National Research Convention</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Professional Profile Card -->
+          <div class="facts-card spotlight-card">
+            <div class="facts-title">Professional Profile</div>
+            <div class="fact-row">
+              <span class="fact-key">Full Name</span>
+              <span class="fact-val">Arsh Satsangi</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-key">University</span>
+              <span class="fact-val">Dayalbagh Educational Institute (DEI), Agra</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-key">Degree</span>
+              <span class="fact-val">B.Tech Electrical Engineering</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-key">Specialization</span>
+              <span class="fact-val">Electronics &amp; VLSI Systems</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-key">Graduation</span>
+              <span class="fact-val">Class of 2026 / 2027 (3rd Year)</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-key">Academic CGPA</span>
+              <span class="fact-val">7.07 / 10.0</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-key">Location</span>
+              <span class="fact-val">Agra, Uttar Pradesh, India</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-key">Languages</span>
+              <span class="fact-val">English, Hindi</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-key">Core Competencies</span>
+              <span class="fact-val">RTL Verilog, Analog Circuits, FPGA Prototyping</span>
+            </div>
+            <div class="fact-row">
+              <span class="fact-key">Engineering Profiles</span>
+              <span class="fact-val">
+                <a href="https://www.linkedin.com/in/arsh-satsangi-20a5b736a/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue); text-decoration: underline; font-weight: 600;">LinkedIn</a> &bull;
+                <a href="https://github.com/Arshsatsangi" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue); text-decoration: underline; font-weight: 600;">GitHub</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOP ENGINEERING PROJECTS (The 3 Flagships in Result-Based Format) -->
+    <section id="projects">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; margin-bottom: 24px;">
+          <div>
+            <h2>Top Engineering Projects</h2>
+            <p class="section-intro-desc" style="margin-bottom: 0;">
+              Result-oriented hardware architectures: custom silicon, resonant analog safety, and 3D digital twins.
+            </p>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent-blue); font-weight: 600;">
+            STRUCTURED: CHALLENGE &bull; SOLUTION &bull; TOOLS &bull; RESULT &bull; IMPACT
+          </div>
+        </div>
+
+        <div class="projects-feed">
+          <!-- FLAGSHIP PROJECT 1: 32-bit CORDIC Processor -->
+          <div class="project-card-full spotlight-card" data-category="vlsi">
+            <div class="project-info">
+              <div class="project-badge-headline">
+                <span class="badge-accent">VLSI Silicon Architecture</span>
+                <span class="badge-status">Placed &amp; Routed Verified</span>
+              </div>
+              <h3>32-bit Multiplier-Less CORDIC Processor in Silicon</h3>
+              <div class="project-tags">
+                <span class="project-tag">Verilog HDL</span>
+                <span class="project-tag">Zero Multipliers</span>
+                <span class="project-tag">Q2.30 Fixed-Point</span>
+                <span class="project-tag">16-Stage Pipeline</span>
+                <span class="project-tag">Xilinx Vivado</span>
+                <span class="project-tag">Python Co-Verification</span>
+              </div>
+
+              <!-- Result-Based Breakdown Structure -->
+              <div class="project-result-block">
+                <div class="result-row">
+                  <span class="result-key challenge">Challenge</span>
+                  <div class="result-val">
+                    Traditional hardware computing sine and cosine relies on multiplier-heavy polynomial approximations (Taylor series) or massive Look-Up Tables (LUTs), consuming excessive silicon die area, high dynamic power, and complex finite state machines.
+                  </div>
+                </div>
+                <div class="result-row">
+                  <span class="result-key solution">Solution</span>
+                  <div class="result-val">
+                    Engineered a <strong>multiplier-less vector-rotation architecture</strong> using purely simple shifts, additions, and subtractions. Replaced complex FSMs with a compact 16-entry Arctangent LUT, a 4-bit synchronous counter, and a full-circle quadrant-folding wrapper (<code>cordic_sincos.v</code>) supporting &minus;&pi; to +&pi;.
+                  </div>
+                </div>
+                <div class="result-row">
+                  <span class="result-key tools">Tools</span>
+                  <div class="result-val">
+                    <strong>Verilog HDL</strong>, <strong>Xilinx Vivado</strong> (Synthesis, Placement &amp; Routing), <strong>Python</strong> (Bit-Accurate Reference Model).
+                  </div>
+                </div>
+                <div class="result-row">
+                  <span class="result-key result">Result</span>
+                  <div class="result-val">
+                    Synthesized a 16-stage pipeline delivering <strong>1 result per clock cycle</strong> continuously; signed 32-bit Q2.30 fixed-point arithmetic with <strong>9.31 &times; 10⁻¹⁰ resolution</strong>; verified worst-case absolute error of <strong>3.01 &times; 10⁻⁵ (~15 bits precision)</strong> against bit-accurate Python models; full placed-and-routed die layout verified.
+                  </div>
+                </div>
+                <div class="result-row">
+                  <span class="result-key impact">Impact</span>
+                  <div class="result-val">
+                    Zero-multiplier silicon core optimized for high-throughput, low-power digital signal processing (DSP), software-defined radio (SDR), and robotic navigation systems.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Academic Mentorship -->
+              <div class="mentor-box">
+                <svg class="mentor-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <div class="mentor-text">
+                  <strong>Academic Mentorship:</strong> Supervised by <a href="https://www.linkedin.com/in/tanmaikul/" target="_blank" rel="noopener noreferrer" class="mentor-link">Dr. Tanmai Kulshreshtha</a>, Assistant Professor, Department of Electrical Engineering, DEI.
+                </div>
+              </div>
+
+              <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="https://github.com/Arshsatsangi/new-cordic-processor-" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 9px 18px; font-size: 0.88rem;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  GitHub: new-cordic-processor-
+                </a>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7521598586556514304/" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="padding: 9px 18px; font-size: 0.88rem;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  LinkedIn Project
+                </a>
+                <a href="#laboratory" class="btn-secondary" style="padding: 9px 18px; font-size: 0.88rem;">
+                  Test in Live Simulator
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: Silicon Layout & Core Specs -->
+            <div>
+              <div class="project-telemetry-box">
+                <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent-blue); margin-bottom: 10px; font-weight: 700;">
+                  VERIFIED HARDWARE METRICS
+                </div>
+                <div class="project-metric-row">
+                  <span class="term-label">Arithmetic Format</span>
+                  <span class="term-val">Q2.30 Fixed-Point</span>
+                </div>
+                <div class="project-metric-row">
+                  <span class="term-label">Hardware Multipliers</span>
+                  <span class="term-val emerald">Zero (0 Multipliers)</span>
+                </div>
+                <div class="project-metric-row">
+                  <span class="term-label">Throughput</span>
+                  <span class="term-val emerald">1 Result / Clock Cycle</span>
+                </div>
+                <div class="project-metric-row">
+                  <span class="term-label">Numerical Resolution</span>
+                  <span class="term-val">9.31 &times; 10⁻¹⁰</span>
+                </div>
+                <div class="project-metric-row">
+                  <span class="term-label">Worst-Case Error</span>
+                  <span class="term-val emerald">3.01 &times; 10⁻⁵ (~15 bits)</span>
+                </div>
+              </div>
+
+              <!-- Silicon Physical Layout Showcase -->
+              <div class="layout-showcase">
+                <div class="comparison-title">Silicon Physical Layout</div>
+                <div class="layout-img-wrap zoomable-trigger" id="layout-zoom-trigger" data-zoom-src="assets/cordic_layout.jpg?v=2" data-zoom-alt="Placed-and-Routed Physical Silicon Layout for 32-bit CORDIC Processor" data-zoom-caption="Placed-and-Routed Physical Silicon Layout — High-Resolution Die Floorplan &amp; Routing" title="Click to view full resolution layout">
+                  <img src="assets/cordic_layout.jpg?v=2" alt="Placed-and-Routed Physical Silicon Layout for 32-bit CORDIC Processor" loading="lazy">
+                </div>
+                <div class="layout-caption">
+                  <span>Die Floorplan &amp; Routing</span>
+                  <span style="color: var(--accent-blue); font-weight: 600;">Click to expand</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FLAGSHIP PROJECT 2: WireGuard Power Line Fault Detection -->
+          <div class="project-card-full spotlight-card" data-category="analog">
+            <div class="project-info">
+              <div class="project-badge-headline">
+                <span class="badge-accent">Low-Voltage Grid Safety</span>
+                <span class="badge-status">Field-Tested Working Demo</span>
+              </div>
+              <h3>WireGuard: Smart Detection of Power Line Failures</h3>
+              <div class="project-tags">
+                <span class="project-tag">Power Line Communication (PLC)</span>
+                <span class="project-tag">Analog Resonant Tuning</span>
+                <span class="project-tag">Fault Localization</span>
+                <span class="project-tag">THD Suppression</span>
+                <span class="project-tag">1:1 Isolation Transformer</span>
+                <span class="project-tag">Physical Test Bench</span>
+              </div>
+
+              <!-- Result-Based Breakdown Structure -->
+              <div class="project-result-block">
+                <div class="result-row">
+                  <span class="result-key challenge">Challenge</span>
+                  <div class="result-val">
+                    Overhead low-voltage power lines snap unnoticed during storms or degradation, causing fatal electrocution hazards, wildfires, and requiring hours of blind manual patrolling. Digital microcontroller/cellular IoT nodes are cost-prohibitive (>85% BOM overhead) for resource-constrained distribution grids.
+                  </div>
+                </div>
+                <div class="result-row">
+                  <span class="result-key solution">Solution</span>
+                  <div class="result-val">
+                    Engineered a <strong>100% analog sensing solution</strong> where each physical distribution pole is tuned to a distinct LC resonant frequency. An unbroken conductor maintains continuous carrier resonance; when snapped, the immediate signal drop pinpoints the <strong>exact pole coordinates</strong> where the fault occurred without microcontrollers.
+                  </div>
+                </div>
+                <div class="result-row">
+                  <span class="result-key tools">Tools</span>
+                  <div class="result-val">
+                    <strong>LC Resonant Networks</strong>, <strong>Active Multi-Stage Filtering</strong>, <strong>1:1 Isolation Transformer</strong>, <strong>PLC Transceivers (TX/RX)</strong>, <strong>Digital Volt/Amp Monitoring</strong>.
+                  </div>
+                </div>
+                <div class="result-row">
+                  <span class="result-key result">Result</span>
+                  <div class="result-val">
+                    Successfully verified a <strong>50-metre carrier transmission range</strong> directly across live distribution lines; achieved <strong>instantaneous breakage tripping</strong> upon signal loss; projected <strong>40%–50% reduction in utility maintenance patrol time</strong>; actively suppressed grid harmonics and Total Harmonic Distortion (THD).
+                  </div>
+                </div>
+                <div class="result-row">
+                  <span class="result-key impact">Impact</span>
+                  <div class="result-val">
+                    Ultra-low-cost, scalable grid safety preventing casualties and speeding up disaster restoration for electrical utilities without costly digital infrastructure.
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="#laboratory" class="btn-primary" style="padding: 9px 18px; font-size: 0.88rem;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                  Open Oscilloscope Lab
+                </a>
+                <a href="mailto:arshsatsangi0@gmail.com?subject=Collaboration:%20WireGuard%20Power%20Line%20Fault%20Detection" class="btn-secondary" style="padding: 9px 18px; font-size: 0.88rem;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  Collaborate on WireGuard
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: Hardware Test Bench & Telemetry -->
+            <div>
+              <div class="project-telemetry-box">
+                <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent-copper); margin-bottom: 10px; font-weight: 700;">
+                  FIELD VALIDATED METRICS
+                </div>
+                <div class="project-metric-row">
+                  <span class="term-label">Tested Range</span>
+                  <span class="term-val emerald">50m Verified Transmission</span>
+                </div>
+                <div class="project-metric-row">
+                  <span class="term-label">Detection Latency</span>
+                  <span class="term-val emerald">Instantaneous (Signal Loss)</span>
+                </div>
+                <div class="project-metric-row">
+                  <span class="term-label">Patrol Time Savings</span>
+                  <span class="term-val">40% &ndash; 50% Reduction</span>
+                </div>
+                <div class="project-metric-row">
+                  <span class="term-label">Architecture</span>
+                  <span class="term-val">100% Analog Sensing Core</span>
+                </div>
+                <div class="project-metric-row">
+                  <span class="term-label">BOM Cost Savings</span>
+                  <span class="term-val emerald">&gt; 85% vs Digital Nodes</span>
+                </div>
+              </div>
+
+              <!-- Physical Hardware Prototype Showcase Box -->
+              <div class="layout-showcase" style="margin-top: 24px;">
+                <div class="comparison-title" style="display: flex; justify-content: space-between; align-items: center;">
+                  <span>Hardware Test Bench Prototype</span>
+                  <span style="font-size: 0.72rem; color: var(--signal-emerald); background: rgba(3, 84, 63, 0.1); padding: 2px 8px; border-radius: var(--radius-full); font-weight: 600;">WORKING RIG</span>
+                </div>
+                <div class="layout-img-wrap zoomable-trigger" id="wireguard-zoom-trigger" data-zoom-src="assets/wireguard_hardware.jpg" data-zoom-alt="WireGuard Physical Hardware Test Bench with 1:1 Isolation Transformer, Contactor, 216V Meter, and PLC Modules" data-zoom-caption="WireGuard Working Demo Test Bench — 1:1 Isolation Transformer, Industrial Contactor, Digital Volt/Amp Meter (216V), Start/Mode Switches &amp; Tuned PLC Transceivers" title="Click to view high-resolution hardware test bench">
+                  <img src="assets/wireguard_hardware.jpg" alt="WireGuard Low-Voltage Power Line Fault Detection Hardware Test Bench with 1:1 Isolation Transformer, Contactor, Volt/Amp Meter, PLC TX/RX, and Transmission Line" loading="lazy">
+                </div>
+                <div class="layout-caption">
+                  <span>1:1 Transformer, Contactor, 216V Meter</span>
+                  <span style="color: var(--accent-copper); font-weight: 600;">Click to expand</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FLAGSHIP PROJECT 3: Virtual Refrigeration & AC Lab (vlab-rc) -->
+          <div class="project-card-full spotlight-card" data-category="automation">
+            <div class="project-info">
+              <div class="project-badge-headline">
+                <span class="badge-accent">3D Digital Twin</span>
+                <span class="badge-status">Deployed on Vercel</span>
+              </div>
+              <h3>Virtual Refrigeration &amp; AC Lab (3D WebGL Digital Twin)</h3>
+              <div class="project-tags">
+                <span class="project-tag">Three.js (WebGL)</span>
+                <span class="project-tag">React 18 + Vite</span>
+                <span class="project-tag">Thermodynamics</span>
+                <span class="project-tag">VCR Cycle Physics</span>
+                <span class="project-tag">GSAP 3</span>
+                <span class="project-tag">Zustand</span>
+              </div>
+
+              <!-- Result-Based Breakdown Structure -->
+              <div class="project-result-block">
+                <div class="result-row">
+                  <span class="result-key challenge">Challenge</span>
+                  <div class="result-val">
+                    Engineering students lack physical access to refrigeration test benches and cut-section compressors to study thermodynamic Vapour-Compression Refrigeration (VCR) cycles, bimetal thermostat hysteresis, and frost accumulation safely.
+                  </div>
+                </div>
+                <div class="result-row">
+                  <span class="result-key solution">Solution</span>
+                  <div class="result-val">
+                    Developed an interactive <strong>3D digital twin of a domestic refrigerator</strong> featuring full orbit 3D component exploration (compressor, condenser, capillary tube, evaporator), dynamic thermal cooling models, bimetal thermostat cut-in/cut-out differential, frost accumulation physics, and exportable PDF observation tables.
+                  </div>
+                </div>
+                <div class="result-row">
+                  <span class="result-key tools">Tools</span>
+                  <div class="result-val">
+                    <strong>React 18</strong>, <strong>Vite 5</strong>, <strong>Three.js</strong> (WebGLRenderer, OrbitControls), <strong>GSAP 3</strong>, <strong>Zustand 4</strong>, <strong>Tailwind CSS</strong>, <strong>jsPDF</strong>.
+                  </div>
+                </div>
+                <div class="result-row">
+                  <span class="result-key result">Result</span>
+                  <div class="result-val">
+                    Deployed a production simulation modeling <strong>0.5 °C/s cooling rates</strong>, <strong>6 °C thermostat hysteresis</strong>, and frost insulation curves with live 5-sensor digital telemetry and downloadable PDF observation tables.
+                  </div>
+                </div>
+                <div class="result-row">
+                  <span class="result-key impact">Impact</span>
+                  <div class="result-val">
+                    Adopted as an interactive virtual-lab teaching aid for the Refrigeration &amp; Air Conditioning curriculum under <strong>Prof. Udhhav Nimbalkar</strong>.
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="https://vlab-rc-9svi.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 9px 18px; font-size: 0.88rem;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  Live WebGL Lab Demo
+                </a>
+                <a href="https://github.com/Arshsatsangi/vlab-rc" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="padding: 9px 18px; font-size: 0.88rem;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  GitHub: vlab-rc
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: Telemetry Box & 3D Model Showcase -->
+            <div>
+              <div class="project-telemetry-box">
+                <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent-blue); margin-bottom: 10px; font-weight: 700;">
+                  SIMULATION SPECIFICATIONS
+                </div>
+                <div class="project-metric-row">
+                  <span class="term-label">Rendering Engine</span>
+                  <span class="term-val">Three.js WebGL (60 FPS)</span>
+                </div>
+                <div class="project-metric-row">
+                  <span class="term-label">Thermodynamic Cycle</span>
+                  <span class="term-val">Vapour Compression (VCR)</span>
+                </div>
+                <div class="project-metric-row">
+                  <span class="term-label">Cabinet Cooling Rate</span>
+                  <span class="term-val emerald">0.5 °C/s Active Model</span>
+                </div>
+                <div class="project-metric-row">
+                  <span class="term-label">Thermostat Differential</span>
+                  <span class="term-val">6 °C Hysteresis Model</span>
+                </div>
+                <div class="project-metric-row">
+                  <span class="term-label">Deployment</span>
+                  <span class="term-val emerald">Production on Vercel</span>
+                </div>
+              </div>
+
+              <!-- 3D Refrigerator Digital Twin Showcase Box -->
+              <div class="layout-showcase" style="margin-top: 24px;">
+                <div class="comparison-title" style="display: flex; justify-content: space-between; align-items: center;">
+                  <span>3D Digital Twin Model</span>
+                  <span style="font-size: 0.72rem; color: var(--signal-emerald); background: rgba(3, 84, 63, 0.1); padding: 2px 8px; border-radius: var(--radius-full); font-weight: 600;">THREE.JS</span>
+                </div>
+                <div class="layout-img-wrap zoomable-trigger" id="vlab-zoom-trigger" data-zoom-src="assets/vlab_refrigerator.jpg" data-zoom-alt="Virtual Refrigeration &amp; AC Lab 3D Domestic Refrigerator Digital Twin with Cabinet, Thermostat, Evaporator &amp; Compressor Components" data-zoom-caption="Virtual Refrigeration &amp; AC Lab — 3D Interactive WebGL Domestic Refrigerator Model (Three.js Orbit Controls, Evaporator &amp; Thermostat Simulation)" title="Click to view high-resolution 3D digital twin model">
+                  <img src="assets/vlab_refrigerator.jpg" alt="Virtual Refrigeration &amp; AC Lab 3D Domestic Refrigerator Digital Twin" loading="lazy">
+                </div>
+                <div class="layout-caption">
+                  <span>Domestic Refrigerator 3D WebGL Rig</span>
+                  <span style="color: var(--accent-blue); font-weight: 600;">Click to expand</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Engineering Projects Section (Secondary) -->
+        <div style="margin-top: 48px;">
+          <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Additional Engineering Works</h3>
+          <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 24px;">
+            Secondary implementations spanning microgrid optimization, autonomous ground robotics, and industrial IoT.
+          </p>
+
+          <div class="secondary-projects-grid">
+            <!-- Project 4: Microgrid Simulator -->
+            <div class="secondary-project-card spotlight-card">
+              <div>
+                <div class="project-badge-headline" style="margin-bottom: 6px;">
+                  <span class="badge-accent" style="font-size: 0.72rem; padding: 2px 8px;">Hackathon 2026</span>
+                  <span class="badge-status" style="font-size: 0.72rem; padding: 2px 8px;">Live on Vercel</span>
+                </div>
+                <h3>MicroGrid Simulator | Smart Energy Scheduler</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Renewable Dataset (3548h)</span>
+                  <span class="project-tag">Battery Physics (88% &eta;)</span>
+                  <span class="project-tag">Time-of-Use Arbitrage</span>
+                </div>
+                <p>
+                  Physics-based residential microgrid digital twin built for International Hackathon 2026. Integrates 3,548 hourly renewable records with battery state-of-charge constraints (88% efficiency, C/4 rate) and Time-of-Use tariff arbitrage to benchmark dispatch policies.
+                </p>
+              </div>
+              <div style="margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="https://microgridhackathon.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 7px 14px; font-size: 0.82rem;">
+                  Live Demo
+                </a>
+                <a href="https://github.com/Arshsatsangi/microgrid_hackathon-" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="padding: 7px 14px; font-size: 0.82rem;">
+                  GitHub Repo
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 5: Road Condition Survey Bot -->
+            <div class="secondary-project-card spotlight-card">
+              <div>
+                <div class="project-badge-headline" style="margin-bottom: 6px;">
+                  <span class="badge-accent" style="font-size: 0.72rem; padding: 2px 8px;">Autonomous Robotics</span>
+                  <span class="badge-status" style="font-size: 0.72rem; padding: 2px 8px;">Field Tested</span>
+                </div>
+                <h3>Road Condition Survey Bot</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Arduino</span>
+                  <span class="project-tag">3-Axis Accelerometer</span>
+                  <span class="project-tag">Ultrasonic Profiling</span>
+                </div>
+                <p>
+                  Autonomous ground rover surveying transport pavement. Combines 3-axis accelerometer and ultrasonic distance profiling to detect potholes, cracks, and road roughness, logging spatial metrics for civic maintenance.
+                </p>
+              </div>
+              <div style="margin-top: 18px; font-family: var(--font-mono); font-size: 0.8rem; color: var(--signal-emerald); font-weight: 600;">
+                ✓ Field Verified Hardware Prototype
+              </div>
+            </div>
+
+            <!-- Project 6: OptiPress Industrial IIoT -->
+            <div class="secondary-project-card spotlight-card">
+              <div>
+                <div class="project-badge-headline" style="margin-bottom: 6px;">
+                  <span class="badge-accent" style="font-size: 0.72rem; padding: 2px 8px;">Industrial IIoT</span>
+                  <span class="badge-status" style="font-size: 0.72rem; padding: 2px 8px;">Verified</span>
+                </div>
+                <h3>OptiPress Industrial IIoT (Arduino Opta)</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Micro-PLC</span>
+                  <span class="project-tag">Industrial Sensors</span>
+                  <span class="project-tag">Predictive Maintenance</span>
+                </div>
+                <p>
+                  Industrial Internet of Things solution built on the micro-PLC Arduino Opta for heavy-duty compressors. Monitors pressure cycles, current transients, and temperature gradients to predict component failure before downtime occurs.
+                </p>
+              </div>
+              <div style="margin-top: 18px; font-family: var(--font-mono); font-size: 0.8rem; color: var(--signal-emerald); font-weight: 600;">
+                ✓ Verified with Industrial Transducers
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE HARDWARE LABORATORY (Hands-on Emulators) -->
+    <section id="laboratory">
+      <div class="container">
+        <div class="lab-header">
+          <h2>Interactive Hardware Laboratory</h2>
+          <p class="section-intro-desc">
+            Hands-on browser emulators of hardware systems engineered from scratch: test the 32-bit CORDIC arithmetic pipeline or observe resonant line failure detection on the analog oscilloscope.
+          </p>
+        </div>
+
+        <div class="lab-tabs">
+          <button class="lab-tab-btn active" data-tab="cordic">Station 1: 32-bit CORDIC Processor</button>
+          <button class="lab-tab-btn" data-tab="oscilloscope">Station 2: WireGuard Analog Oscilloscope</button>
+        </div>
+
+        <!-- Panel 1: CORDIC Simulator -->
+        <div id="lab-cordic" class="lab-panel active">
+          <div class="simulator-grid">
+            <div class="sim-controls-card spotlight-card">
+              <h3>CORDIC Angle Rotation Core</h3>
+              <p style="margin: 8px 0 20px; font-size: 0.9rem;">
+                Computes sine and cosine using only shifts and additions via a 16-stage vector rotation pipeline with a 16-entry arctangent LUT.
+              </p>
+
+              <div class="control-group">
+                <div class="control-label-wrap">
+                  <span class="control-label">Target Angle (&theta;):</span>
+                  <span class="control-value" id="cordic-angle-display">45.0° (0.785 rad)</span>
+                </div>
+                <input type="range" id="cordic-angle-slider" min="-180" max="180" value="45" step="0.5">
+              </div>
+
+              <div class="sim-results-grid">
+                <div class="result-card">
+                  <div class="result-title">COMPUTED SINE [Y16]</div>
+                  <div class="result-val" id="cordic-out-sin">0.707107</div>
+                  <div class="result-hex" id="cordic-hex-sin">0x2D413CCD</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-title">COMPUTED COSINE [X16]</div>
+                  <div class="result-val" id="cordic-out-cos">0.707107</div>
+                  <div class="result-hex" id="cordic-hex-cos">0x2D413CCD</div>
+                </div>
+              </div>
+
+              <div style="margin-top: 16px; padding: 12px; background: var(--bg-surface-elevated); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">
+                  WORST-CASE ABSOLUTE ERROR:
+                </div>
+                <div id="cordic-out-error" style="font-family: var(--font-mono); font-size: 0.95rem; color: var(--signal-emerald); margin-top: 4px; font-weight: 600;">
+                  3.01e-5 (Precision: ~15 bits)
+                </div>
+              </div>
+
+              <!-- Iterations Table -->
+              <div class="table-container">
+                <table class="cordic-table">
+                  <thead>
+                    <tr>
+                      <th>Stage</th>
+                      <th>Direction d<sub>i</sub></th>
+                      <th>X<sub>i</sub> (Cos)</th>
+                      <th>Y<sub>i</sub> (Sin)</th>
+                      <th>Z<sub>i</sub> (Rem.)</th>
+                      <th>&alpha;<sub>i</sub> (LUT)</th>
+                    </tr>
+                  </thead>
+                  <tbody id="cordic-table-body">
+                    <!-- Injected by cordic-simulator.js -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Visualization Canvas -->
+            <div class="sim-canvas-card spotlight-card">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent-blue); font-weight: 700;">
+                  UNIT CIRCLE ROTATION VECTOR
+                </div>
+                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">
+                  RTL VECTOR STEPPER
+                </div>
+              </div>
+              <div class="canvas-container">
+                <canvas id="cordic-canvas"></canvas>
+              </div>
+              <div style="margin-top: 12px; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); display: flex; justify-content: space-between;">
+                <span>Gold: Initial Vector [X0, Y0]</span>
+                <span>Cyan: Final Vector [X16, Y16]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel 2: WireGuard Oscilloscope -->
+        <div id="lab-oscilloscope" class="lab-panel">
+          <div class="simulator-grid">
+            <div class="sim-controls-card spotlight-card">
+              <h3>WireGuard Line Fault &amp; Resonance</h3>
+              <p style="margin: 8px 0 20px; font-size: 0.9rem;">
+                Analog line break detection through unique pole resonant frequencies along low-voltage distribution lines.
+              </p>
+
+              <div class="control-group">
+                <span class="control-label" style="display: block; margin-bottom: 8px;">Select Line Status / Fault Node:</span>
+                <div class="pole-selector-group">
+                  <button class="pole-btn" data-pole="normal">No Fault (50Hz Grid)</button>
+                  <button class="pole-btn" data-pole="pole1">Pole #1 (22 kHz)</button>
+                  <button class="pole-btn active" data-pole="pole2">Pole #2 (36 kHz)</button>
+                  <button class="pole-btn" data-pole="pole3">Pole #3 (54 kHz)</button>
+                  <button class="pole-btn" data-pole="pole4">Pole #4 (78 kHz)</button>
+                </div>
+              </div>
+
+              <div class="control-group" style="margin-top: 20px;">
+                <div class="control-label-wrap">
+                  <span class="control-label">Transmission Distance:</span>
+                  <span class="control-value" id="osc-range-display">50 m (Max tested: 50 m)</span>
+                </div>
+                <input type="range" id="osc-range-slider" min="10" max="70" value="50" step="5">
+              </div>
+
+              <div style="margin-top: 20px; display: flex; align-items: center; justify-content: space-between; padding: 14px; background: var(--bg-surface-elevated); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                <div>
+                  <div style="font-weight: 600; font-size: 0.9rem; color: var(--text-primary);">Active Harmonic Filter (THD Suppression)</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">Mitigates line noise &amp; frequency instability</div>
+                </div>
+                <label style="cursor: pointer;">
+                  <input type="checkbox" id="osc-filter-toggle" checked style="width: 18px; height: 18px; accent-color: var(--signal-emerald);">
+                </label>
+              </div>
+
+              <div class="sim-results-grid">
+                <div class="result-card">
+                  <div class="result-title">LINE DETECTION STATUS</div>
+                  <div class="result-val" id="osc-status-text" style="color: var(--accent-copper);">BREAK DETECTED</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-title">ISOLATED FREQUENCY</div>
+                  <div class="result-val" id="osc-freq-text">36.0 kHz</div>
+                </div>
+                <div class="result-card">
+                  <div class="result-title">MEASURED THD</div>
+                  <div class="result-val" id="osc-thd-text">1.8% (Filtered)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Oscilloscope Canvas -->
+            <div class="sim-canvas-card spotlight-card">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--signal-emerald); font-weight: 700;">
+                  ANALOG OSCILLOSCOPE TRACE (CH1 / CH2)
+                </div>
+                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">
+                  500 MS/s REAL-TIME
+                </div>
+              </div>
+              <div class="canvas-container">
+                <canvas id="osc-canvas"></canvas>
+              </div>
+              <div style="margin-top: 12px; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); display: flex; justify-content: space-between;">
+                <span>Green Trace: High-Frequency Resonance Carrier</span>
+                <span>Blue Trace: 50Hz AC Fundamental Power</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIAL ENGINEERING EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <h2>Industrial Engineering Experience</h2>
+        <p class="section-intro-desc">
+          Practical application of high-voltage electrical standards, transformer manufacturing, and quality verification.
+        </p>
+
+        <div class="experience-card spotlight-card">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px;">
+            <div>
+              <div class="role-title">Electrical Engineering Intern</div>
+              <div class="company-meta">
+                MEI Power Private Limited (MARSONS Group) &bull; Agra, Uttar Pradesh
+              </div>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent-blue); background: var(--bg-secondary); padding: 4px 10px; border-radius: var(--radius-sm); font-weight: 600;">
+              May &ndash; June 2026
+            </div>
+          </div>
+
+          <ul class="project-specs-list" style="margin-top: 18px;">
+            <li>
+              <span class="spec-bullet">&rsaquo;</span>
+              <span>Assisted in the design, precision assembly, and rigorous testing of heavy-duty power and distribution transformers.</span>
+            </li>
+            <li>
+              <span class="spec-bullet">&rsaquo;</span>
+              <span>Verified critical electrical parameters against Indian Standards (IS) and International Electrotechnical Commission (IEC) quality and energy-efficiency frameworks.</span>
+            </li>
+            <li>
+              <span class="spec-bullet">&rsaquo;</span>
+              <span>Gained intensive hands-on workshop exposure to magnetic core lamination, high-voltage winding techniques, insulation resistance measurements, and dielectric oil breakdown testing under senior power engineers.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL ARSENAL & SKILLS MATRIX -->
+    <section id="skills">
+      <div class="container">
+        <h2>Technical Skills Arsenal</h2>
+        <p class="section-intro-desc">
+          A disciplined foundation combining hardware description, circuit simulation, laboratory instrumentation, and embedded systems.
+        </p>
+
+        <div class="skills-grid">
+          <div class="spotlight-card">
+            <div class="skill-category-title">Languages &amp; HDL</div>
+            <div class="skill-items-list">
+              <div class="skill-item"><span class="skill-dot"></span>Verilog HDL (RTL, FSMs &amp; Testbenches)</div>
+              <div class="skill-item"><span class="skill-dot"></span>C (Low-Level Embedded Firmware)</div>
+              <div class="skill-item"><span class="skill-dot"></span>Python (NumPy, Bit-Accurate Co-Verification)</div>
+              <div class="skill-item"><span class="skill-dot"></span>Linux / Shell Scripting</div>
+            </div>
+          </div>
+
+          <div class="spotlight-card">
+            <div class="skill-category-title">EDA &amp; Silicon Design</div>
+            <div class="skill-items-list">
+              <div class="skill-item"><span class="skill-dot"></span>Xilinx Vivado (FPGA Synthesis &amp; Implementation)</div>
+              <div class="skill-item"><span class="skill-dot"></span>ModelSim (Logic &amp; Timing Verification)</div>
+              <div class="skill-item"><span class="skill-dot"></span>Altium Designer (Multi-Layer PCB Layout)</div>
+              <div class="skill-item"><span class="skill-dot"></span>LTspice (Analog Circuit Simulation)</div>
+            </div>
+          </div>
+
+          <div class="spotlight-card">
+            <div class="skill-category-title">Laboratory Instrumentation</div>
+            <div class="skill-items-list">
+              <div class="skill-item"><span class="skill-dot"></span>Digital Storage Oscilloscopes (DSO)</div>
+              <div class="skill-item"><span class="skill-dot"></span>Function &amp; Arbitrary Waveform Generators</div>
+              <div class="skill-item"><span class="skill-dot"></span>Digital Multimeters &amp; LCR Meters</div>
+              <div class="skill-item"><span class="skill-dot"></span>SMD Soldering &amp; Hot-Air Rework Stations</div>
+            </div>
+          </div>
+
+          <div class="spotlight-card">
+            <div class="skill-category-title">Core Engineering Disciplines</div>
+            <div class="skill-items-list">
+              <div class="skill-item"><span class="skill-dot"></span>VLSI Architecture &amp; Fixed-Point Arithmetic</div>
+              <div class="skill-item"><span class="skill-dot"></span>Analog Resonant Circuit Design &amp; LC Tuning</div>
+              <div class="skill-item"><span class="skill-dot"></span>Harmonic Suppression &amp; Active Filtering (THD)</div>
+              <div class="skill-item"><span class="skill-dot"></span>Digital Logic Design &amp; Synchronous FSMs</div>
+            </div>
+          </div>
+
+          <div class="spotlight-card">
+            <div class="skill-category-title">Hardware Test &amp; Standards</div>
+            <div class="skill-items-list">
+              <div class="skill-item"><span class="skill-dot"></span>IS / IEC Transformer Testing Standards</div>
+              <div class="skill-item"><span class="skill-dot"></span>Dielectric Oil Breakdown Testing</div>
+              <div class="skill-item"><span class="skill-dot"></span>Insulation Resistance &amp; Megger Testing</div>
+              <div class="skill-item"><span class="skill-dot"></span>Power Distribution Bench Verification</div>
+            </div>
+          </div>
+
+          <div class="spotlight-card">
+            <div class="skill-category-title">Embedded &amp; Systems</div>
+            <div class="skill-items-list">
+              <div class="skill-item"><span class="skill-dot"></span>Arduino Opta (Industrial Micro-PLC)</div>
+              <div class="skill-item"><span class="skill-dot"></span>Microcontroller Prototyping (ARM, AVR)</div>
+              <div class="skill-item"><span class="skill-dot"></span>Three.js (WebGL 3D Digital Twins)</div>
+              <div class="skill-item"><span class="skill-dot"></span>Git &amp; GitHub Version Control</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOBAL HONORS & PROOF OF IMPACT -->
+    <section id="honors">
+      <div class="container">
+        <h2>Honors &amp; Proof of Impact</h2>
+        <p class="section-intro-desc">
+          Competitive international rankings, research convention selections, and academic awards.
+        </p>
+
+        <div class="honors-grid">
+          <div class="spotlight-card">
+            <div class="honor-rank">INTERNATIONAL RANK // TOP 11 OF 250+ TEAMS</div>
+            <h3>HackSecure X International Hackathon</h3>
+            <p style="margin-top: 8px;">
+              Ranked Top 11 among 250+ international teams in a high-stakes hardware cybersecurity challenge, engineering secure firmware and reverse-engineering embedded logic.
+            </p>
+          </div>
+
+          <div class="spotlight-card">
+            <div class="honor-rank">1ST PLACE // 100+ PARTICIPANTS</div>
+            <h3>IEEE DEI Cybersecurity Quiz</h3>
+            <p style="margin-top: 8px;">
+              Secured 1st place in the IEEE DEI Cybersecurity Quiz among 100+ participating engineering students, demonstrating rapid technical recall in systems security and hardware architecture.
+            </p>
+          </div>
+
+          <div class="spotlight-card">
+            <div class="honor-rank">ZONAL RESEARCH REPRESENTATION</div>
+            <h3>Anveshan National Student Research Convention</h3>
+            <p style="margin-top: 8px;">
+              Selected to represent Dayalbagh Educational Institute at the prestigious North Zone Anveshan Student Research Convention for innovative engineering research.
+            </p>
+          </div>
+
+          <div class="spotlight-card">
+            <div class="honor-rank">NATIONAL FINALIST // TOP 20 OF 200+ TEAMS</div>
+            <h3>DEI Virtual Labs National Hackathon</h3>
+            <p style="margin-top: 8px;">
+              Top 20 National Finalist among 200+ engineering teams, developing high-fidelity interactive simulation software for engineering lab education.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & ACTION FOOTER -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-card spotlight-card">
+          <h2>Initiate Collaboration</h2>
+          <p style="margin: 0 auto; max-width: 580px; font-size: 1rem; color: var(--text-secondary);">
+            Seeking a core engineering internship in VLSI design, embedded systems, or analog hardware prototyping. Let&rsquo;s discuss architecture, circuit design, and hardware implementation.
+          </p>
+
+          <div class="contact-links-row">
+            <a href="mailto:arshsatsangi0@gmail.com" class="btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              arshsatsangi0@gmail.com
+            </a>
+            <a href="tel:+919068515123" class="btn-secondary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              +91 9068515123
+            </a>
+            <button class="btn-secondary copy-email-btn">
+              Copy Email
+            </button>
+            <a href="https://www.linkedin.com/in/arsh-satsangi-20a5b736a/" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              LinkedIn Profile
+            </a>
+          </div>
+
+          <div style="margin-top: 32px; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">
+            Agra, Uttar Pradesh, India &bull; <a href="https://github.com/Arshsatsangi" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue); text-decoration: underline;">GitHub: Arshsatsangi</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>Arsh Satsangi &bull; Electrical &amp; Embedded Systems Engineering Portfolio</div>
+      <div style="font-family: var(--font-mono); font-size: 0.78rem; margin-top: 6px; color: var(--text-muted);">
+        Hardware Prototypes, 32-bit CORDIC Silicon &bull; Dayalbagh Educational Institute, Agra
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Lightbox Modal for Silicon Layout & Hardware Test Benches -->
+  <div id="lightbox-modal" class="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close image zoom">&times;</button>
+      <img src="assets/cordic_layout.jpg?v=2" alt="High-Resolution Hardware Showcase">
+      <div id="lightbox-caption" style="margin-top: 14px; font-family: var(--font-mono); font-size: 0.85rem; color: #f1f5f9; text-align: center; background: rgba(0,0,0,0.6); padding: 8px 16px; border-radius: var(--radius-full);"></div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast">Copied to clipboard</div>
+
+  <!-- Interactive Scripts -->
+  <script src="particles-bg.js"></script>
+  <script src="cordic-simulator.js"></script>
+  <script src="oscilloscope.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
