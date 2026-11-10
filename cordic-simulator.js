@@ -107,7 +107,17 @@
     if (!angleSlider || !canvas) return;
     const ctx = canvas.getContext('2d');
 
+    function resizeCanvas() {
+      const rect = canvas.getBoundingClientRect();
+      if (rect.width > 0 && rect.height > 0) {
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+      }
+    }
+    resizeCanvas();
+
     function update() {
+      resizeCanvas();
       const degrees = parseFloat(angleSlider.value);
       const radians = (degrees * Math.PI) / 180;
       angleDisplay.textContent = `${degrees.toFixed(1)}° (${radians.toFixed(3)} rad)`;
@@ -209,6 +219,7 @@
 
     angleSlider.addEventListener('input', update);
     window.addEventListener('themeChanged', update);
+    window.addEventListener('resize', update);
     update();
   }
 

@@ -456,19 +456,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 12. Mobile Navigation Toggle
+  // 12. Mobile Navigation Toggle & Outside Tap Dismissal
   const mobileToggle = document.getElementById('mobile-toggle');
   const navLinksContainer = document.querySelector('.nav-links');
 
   if (mobileToggle && navLinksContainer) {
-    mobileToggle.addEventListener('click', () => {
-      navLinksContainer.classList.toggle('mobile-open');
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = navLinksContainer.classList.toggle('mobile-open');
+      mobileToggle.setAttribute('aria-expanded', isOpen);
     });
 
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         navLinksContainer.classList.remove('mobile-open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
       });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navLinksContainer.contains(e.target) && !mobileToggle.contains(e.target)) {
+        navLinksContainer.classList.remove('mobile-open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      }
     });
   }
 });

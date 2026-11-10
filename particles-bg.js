@@ -225,20 +225,20 @@
     requestAnimationFrame(animate);
   }
 
-  // Mouse interaction: spawn burst of pulses on mousemove
+  // Mouse & Touch interaction: spawn burst of pulses on pointer movement
   let lastMove = 0;
-  window.addEventListener('mousemove', (e) => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
+  function handlePointer(clientX, clientY) {
+    mouse.x = clientX;
+    mouse.y = clientY;
 
     const now = performance.now();
     if (now - lastMove > 100 && signalPulses.length < 30) {
       lastMove = now;
       const colors = getThemeColors();
 
-      // Find particle closest to mouse
+      // Find particle closest to pointer
       for (let i = 0; i < particles.length; i++) {
-        const d = Math.hypot(particles[i].x - e.clientX, particles[i].y - e.clientY);
+        const d = Math.hypot(particles[i].x - clientX, particles[i].y - clientY);
         if (d < 100 && particles[i].neighbors.length > 0) {
           const target = particles[i].neighbors[Math.floor(Math.random() * particles[i].neighbors.length)];
           signalPulses.push(new SignalPulse(particles[i], target, colors.pulse));
@@ -246,9 +246,24 @@
         }
       }
     }
+  }
+
+  window.addEventListener('mousemove', (e) => {
+    handlePointer(e.clientX, e.clientY);
   });
 
+  window.addEventListener('touchmove', (e) => {
+    if (e.touches && e.touches[0]) {
+      handlePointer(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  }, { passive: true });
+
   window.addEventListener('mouseleave', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  window.addEventListener('touchend', () => {
     mouse.x = null;
     mouse.y = null;
   });

@@ -63,6 +63,16 @@
       }
     }
 
+    function resizeCanvas() {
+      const rect = canvas.getBoundingClientRect();
+      if (rect.width > 0 && rect.height > 0) {
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+      }
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
     updateStatus();
     renderLoop();
   }
