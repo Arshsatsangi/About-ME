@@ -1968,20 +1968,8 @@ table.cordic-table td {
 }
 
 @media (max-width: 680px) {
-  .desktop-resume-btn {
-    display: none;
-  }
-  .theme-pill-btn .theme-label {
-    display: none;
-  }
-  .theme-pill-btn {
-    padding: 6px 7px;
-    min-width: 24px;
-    justify-content: center;
-    gap: 0;
-  }
   .nav-actions {
-    gap: 8px;
+    gap: 10px;
   }
   .nav-brand .nav-name {
     font-size: 0.94rem;
@@ -1989,6 +1977,12 @@ table.cordic-table td {
   .nav-logo-badge {
     font-size: 0.74rem;
     padding: 4px 7px;
+  }
+}
+
+@media (max-width: 440px) {
+  .desktop-resume-btn {
+    display: none;
   }
 }
 

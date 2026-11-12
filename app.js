@@ -1,35 +1,9 @@
 // app.js - Master Portfolio Interactivity, Typing Effect, Live Clock & Theme Management
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Multi-Theme Switching (White, Beige, Stone, Dark)
-  const themePills = document.querySelectorAll('.theme-pill-btn');
+  // 1. Theme Configuration (Permanent Soft Architectural Stone)
   const htmlRoot = document.documentElement;
-
-  let savedTheme = localStorage.getItem('arsh_portfolio_theme');
-  if (!savedTheme || savedTheme === 'white' || savedTheme === 'light') {
-    savedTheme = 'stone';
-  }
-  setTheme(savedTheme);
-
-  function setTheme(theme) {
-    htmlRoot.setAttribute('data-theme', theme);
-    localStorage.setItem('arsh_portfolio_theme', theme);
-    themePills.forEach(btn => {
-      if (btn.getAttribute('data-theme-val') === theme) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
-    });
-    window.dispatchEvent(new CustomEvent('themeChanged', { detail: { theme } }));
-  }
-
-  themePills.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const targetTheme = btn.getAttribute('data-theme-val');
-      setTheme(targetTheme);
-      playTone(targetTheme === 'dark' ? 540 : 740, 'sine', 0.08);
-    });
-  });
+  htmlRoot.setAttribute('data-theme', 'stone');
+  localStorage.setItem('arsh_portfolio_theme', 'stone');
 
   // 2. Dynamic Typing Effect for Hero Roles
   const typingTextEl = document.getElementById('typing-text');
